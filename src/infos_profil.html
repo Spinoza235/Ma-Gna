@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>MA-NGA - Informations de profil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .mountain-bg {
+      clip-path: polygon(
+        0% 100%, 
+        8% 85%, 
+        15% 75%, 
+        22% 65%, 
+        30% 55%, 
+        38% 50%, 
+        45% 45%, 
+        52% 42%, 
+        58% 45%, 
+        65% 50%, 
+        72% 55%, 
+        78% 65%, 
+        85% 75%, 
+        92% 85%, 
+        100% 100%
+      );
+    }
+  </style>
+</head>
+<body class="bg-white min-h-screen relative overflow-hidden">
+  
+  <!-- Background Mountain -->
+  <div class="mountain-bg absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full sm:w-4/5 md:w-3/5 h-96 sm:h-80 md:h-96 lg:h-[500px] opacity-70 z-0"
+       style="background: linear-gradient(to top, #8fbc8f 0%, #bef0be 40%, #b6f5c1 100%);"></div>
+
+  <!-- Header -->
+  <div class="flex justify-between items-center p-4 sm:p-6 relative z-10">
+    <div class="text-lg sm:text-xl font-bold text-gray-800">9.41</div>
+    <div class="flex space-x-1 sm:space-x-2 border-2 border-green-500 rounded-lg p-1 sm:p-2">
+      <a href="#" class="text-gray-600 text-base">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <div class="h-6 w-px bg-green-500"></div>
+  <a href="#" class="text-white bg-green-500 rounded-full p-1 text-base">
+    <i class="fas fa-user"></i>
+  </a>
+  <div class="h-6 w-px bg-green-500"></div>
+  <a href="#" class="text-gray-600 text-base">
+    <i class="fas fa-home"></i>
+  </a>
+  <div class="h-6 w-px bg-green-500"></div>
+  <a href="#" class="text-gray-600 text-base">
+    <i class="fas fa-bars"></i>
+  </a>
+    </div>
+  </div>
+
+  <!-- Logo with circular green border -->
+   <div class="flex justify-center mt-2 sm:mt-4 relative z-10">
+    <div class="w-20 h-20 sm:w-24 sm:h-24 overflow-hidden bg-white">
+      <img src="images/image-removebg-preview (1).png" 
+           alt="MA-NGA Logo" 
+           class="w-full h-full object-cover">
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="flex justify-center mt-4 sm:mt-6 relative z-10">
+    <div class="w-4/5 sm:w-3/5 md:w-1/2 lg:w-2/5 bg-gray-300 rounded-full h-2">
+      <div class="bg-green-500 h-2 rounded-full" style="width: 30%;"></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="text-center px-4 sm:px-6 lg:px-8 mt-6 sm:mt-8 relative z-10 max-w-4xl mx-auto">
+    <h1 class="text-red-500 font-bold text-lg sm:text-xl mb-2 sm:mb-3">VOS INFORMATIONS DE PROFIL MA-NGU</h1>
+    <h2 class="text-[#210C4A] font-bold text-xl sm:text-2xl mb-6 sm:mb-8">Quel est votre Nom ?</h2>
+    
+    <!-- Form -->
+    <div class="max-w-md mx-auto space-y-4 sm:space-y-6">
+      <!-- Nom Field -->
+      <div class="relative">
+        <input type="text" 
+               placeholder="Remplir votre nom ici"
+               class="w-full p-4 sm:p-5 text-center text-amber-700 bg-white border-2 border-gray-300 rounded-lg focus:border-green-500 focus:outline-none text-base sm:text-lg placeholder-amber-600">
+      </div>
+
+      <!-- Prénom Field -->
+      <div class="relative">
+        <input type="text" 
+               placeholder="Remplir votre prénom ici"
+               class="w-full p-4 sm:p-5 text-center text-amber-700 bg-white border-2 border-gray-300 rounded-lg focus:border-green-500 focus:outline-none text-base sm:text-lg placeholder-amber-600">
+      </div>
+
+      <!-- Progress Dots -->
+      <div class="flex justify-center space-x-2 mt-6 sm:mt-8">
+        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+        <div class="w-3 h-3 bg-red-300 rounded-full"></div>
+        <div class="w-3 h-3 bg-red-300 rounded-full"></div>
+        <div class="w-3 h-3 bg-red-300 rounded-full"></div>
+        <div class="w-3 h-3 bg-red-300 rounded-full"></div>
+        <div class="w-3 h-3 bg-red-300 rounded-full"></div>
+      </div>
+
+      <!-- Next Button -->
+      <button class="w-full bg-red-500 hover:bg-red-600 text-white font-bold text-xl sm:text-2xl py-3 sm:py-4 rounded-2xl mt-6 sm:mt-8 transition-colors">
+        Suivant
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
