@@ -43,10 +43,10 @@
     </div>
   </div>
 
- <!-- Progress Bar -->
-  <div class="flex justify-center mt-3 relative z-20">
+  <!-- Progress Bar -->
+  <div class="flex justify-center mt-2 relative z-20">
     <div class="w-4/5 max-w-sm bg-gray-300 rounded-full h-2">
-      <div class="bg-green-500 h-2 rounded-full" style="width: 90%;"></div>
+      <div class="bg-green-500 h-2 rounded-full" style="width: 100%;"></div>
     </div>
   </div>
 
@@ -54,21 +54,29 @@
   <div class="text-center px-4 mt-4 relative z-20 flex-1 flex flex-col justify-center">
     
     <!-- Title -->
-    <h1 class="text-green-500 font-bold text-sm mb-1 uppercase">DERNIÈRE LIGNE DROITE</h1>
-    <h2 class="text-[#210C4A] font-bold text-lg mb-2">Vous allez devenir MA-NGU</h2>
+    <h1 class="text-green-500 font-bold text-lg uppercase mb-1">PROGRAMMEZ VOTRE PREMIER ENTRETIEN</h1>
+    <h2 class="text-gray-800 font-semibold text-base mb-3">Voici les coordonées de votre TA-NGU</h2>
     
-    <!-- Subtitle -->
-    <p class="text-amber-800 text-sm sm:text-base max-w-2xl mx-auto">Vous avez choisi d'envoyer</p>
-    
-    <!-- Amount -->
-    <div class="text-green-500 font-bold text-2xl mb-1">30 000 XAF / mois pendant 1 an</div>
-    
-    <!-- Date range -->
-    <p class="text-amber-800 text-sm sm:text-base max-w-2xl mx-auto">Du 26-01-2025 et le 26-01-2026</p>
-  <div class="flex flex-col items-center space-y-4 mb-6">  
-  <button class="w-40 bg-green-500 hover:bg-green-600 text-white font-bold text-xs py-2 rounded-full transition-all duration-300 shadow-lg">
-    VALIDEZ<br>LE PAIEMENT
-  </button>
+    <!-- TA-NGU Button -->
+    <div class="flex justify-center mb-4">
+      <button class="border-2 border-amber-900 text-amber-900 font-semibold px-6 py-2 rounded-lg text-sm hover:bg-amber-50 transition-colors">
+        VOTRE TA-NGU
+      </button>
+    </div>
+
+    <!-- Background circular area with contact icons -->
+    <div class="relative mx-auto mb-4" style="width: 250px; height: 120px;">
+   
+      <!-- Contact Icons -->
+      <div class="relative z-10 flex justify-center space-x-4 pt-8">
+        <button class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white hover:bg-green-600 transition-colors">
+          <i class="fab fa-whatsapp text-lg"></i>
+        </button>
+        <button class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white hover:bg-green-600 transition-colors">
+          <i class="fas fa-envelope text-lg"></i>
+        </button>
+      </div>
+    </div>
     
     <!-- Progress indicators -->
     <div class="flex justify-center space-x-2 mb-4">
@@ -79,31 +87,27 @@
     </div>
     
     <!-- Navigation buttons -->
-    <div class="flex items-center gap-3 ">
+    <div class="flex items-center justify-center gap-2">
       <!-- Back arrow -->
-      <button class="text-gray-600 hover:text-gray-800 transition-colors">
+      <button class="text-gray-600 hover:text-gray-800 transition-colors p-1">
         <i class="fas fa-chevron-left text-lg"></i>
       </button>
-      
+
       <!-- Next button -->
-   <button class="w-80 bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 px-8 rounded-full transition-all duration-300 shadow-lg transform hover:scale-105">
+      <button class="w-72 bg-green-500 hover:bg-green-600 text-white font-bold text-base py-3 px-6 rounded-full transition-all duration-300 shadow-lg transform hover:scale-105">
         Suivant
       </button>
     </div>
+
   </div>
-</div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const validateBtn = document.querySelector('button:has-text("VALIDEZ")');
-      const nextBtn = document.querySelector('button:has-text("Suivant")');
+      const tanguBtn = document.querySelector('button:contains("VOTRE TA-NGU")');
+      const nextBtn = document.querySelector('button:contains("Suivant")');
       const backBtn = document.querySelector('.fas.fa-chevron-left').parentElement;
-      
-      if (validateBtn) {
-        validateBtn.addEventListener('click', function() {
-          alert('Redirection vers la validation du paiement...');
-        });
-      }
+      const whatsappBtn = document.querySelector('.fab.fa-whatsapp').parentElement;
+      const emailBtn = document.querySelector('.fas.fa-envelope').parentElement;
       
       if (nextBtn) {
         nextBtn.addEventListener('click', function() {
@@ -114,6 +118,24 @@
       if (backBtn) {
         backBtn.addEventListener('click', function() {
           alert('Retour à l\'étape précédente...');
+        });
+      }
+
+      if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function() {
+          alert('Ouverture de WhatsApp...');
+        });
+      }
+
+      if (emailBtn) {
+        emailBtn.addEventListener('click', function() {
+          alert('Ouverture de l\'email...');
+        });
+      }
+
+      if (tanguBtn) {
+        tanguBtn.addEventListener('click', function() {
+          alert('Affichage des informations du TA-NGU...');
         });
       }
     });
