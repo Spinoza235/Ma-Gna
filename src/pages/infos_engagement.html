@@ -73,7 +73,7 @@
   </div>
  </div>
 
-    <!-- Options d'engagement -->
+   <!-- Options d'engagement -->
     <div class="flex gap-3 mb-8">
       <button class="engagement-option flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-full text-sm font-medium transition-all">
         Oui je m'engage
@@ -110,6 +110,15 @@
     let selectedEngagement = null;
     let isDragging = false;
     let currentValue = 70; // Valeur initiale en pourcentage
+    let rangeInteracted = false; // Nouvelle variable pour tracker l'interaction avec le curseur
+
+    // Fonction pour activer le bouton suivant
+    function checkAndEnableButton() {
+      if (selectedEngagement || rangeInteracted) {
+        nextBtn.disabled = false;
+        nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+    }
 
     // Gestion des options d'engagement
     engagementOptions.forEach(option => {
@@ -120,8 +129,7 @@
 
         this.classList.add('ring-4', 'ring-purple-800');
         selectedEngagement = this.textContent.trim();
-        nextBtn.disabled = false;
-        nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        checkAndEnableButton();
       });
     });
 
@@ -129,6 +137,8 @@
     function updateRange(percentage) {
       rangeFill.style.height = percentage + '%';
       rangeThumb.style.bottom = percentage + '%';
+      rangeInteracted = true; // Marquer que l'utilisateur a interagi avec le curseur
+      checkAndEnableButton(); // Vérifier si on peut activer le bouton
     }
 
     function getPercentageFromEvent(e) {
@@ -180,12 +190,10 @@
 
     // Bouton suivant
     nextBtn.addEventListener('click', function () {
-      if (selectedEngagement) {
-        alert(`Vous avez choisi : ${selectedEngagement}\nNiveau d'engagement : ${Math.round(currentValue)}%`);
-      }
+      const engagementText = selectedEngagement || "Aucune option sélectionnée";
+      alert(`Vous avez choisi : ${engagementText}\nNiveau d'engagement : ${Math.round(currentValue)}%`);
     });
   </script>
 
 </body>
 </html>
-
