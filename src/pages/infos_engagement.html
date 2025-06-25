@@ -59,7 +59,7 @@
     <!-- Texte avec range vertical à droite -->
     <div class="relative mb-8 max-w-2xl mx-auto flex gap-4">
        <div class="flex-1">
-    <p class="text-amber-700 leading-relaxed text-sm sm:text-base text-left">
+    <p class="text-amber-900 leading-relaxed text-sm sm:text-base text-left">
       Je m'engage à participer activement au programme des associations affiliées à la Fédération Kimuntu, à respecter les valeurs d'entraide, de bienveillance et de respect précité.
     </p>
     </div>
@@ -75,10 +75,10 @@
 
    <!-- Options d'engagement -->
     <div class="flex gap-3 mb-8">
-      <button class="engagement-option flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-full text-sm font-medium transition-all">
+      <button class="engagement-option flex-1 bg-purple-400 hover:bg-purple-600 text-white py-3 px-4 rounded-full text-sm font-medium transition-all">
         Oui je m'engage
       </button>
-      <button class="engagement-option flex-1 bg-purple-300 hover:bg-purple-400 text-white py-3 px-4 rounded-full text-sm font-medium transition-all">
+      <button class="engagement-option flex-1 bg-purple-400 hover:bg-purple-600 text-white py-3 px-4 rounded-full text-sm font-medium transition-all">
         Non, je préfère réfléchir
       </button>
     </div>
@@ -124,10 +124,10 @@
     engagementOptions.forEach(option => {
       option.addEventListener('click', function () {
         engagementOptions.forEach(opt => {
-          opt.classList.remove('ring-4', 'ring-purple-800');
+          opt.classList.remove('ring-4', 'bg-purple-600');
         });
 
-        this.classList.add('ring-4', 'ring-purple-800');
+        this.classList.add('ring-4', 'bg-purple-600');
         selectedEngagement = this.textContent.trim();
         checkAndEnableButton();
       });
