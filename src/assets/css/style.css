@@ -19,3 +19,42 @@
       height: 35vh;
       min-height: 250px;
    }
+    .engagement-option {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .engagement-option:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .engagement-option.selected {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+  .range-container {
+    position: relative;
+    width: 8px;
+    height: 128px;
+    background-color: black;
+    border-radius: 9999px;
+  }
+
+  .range-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    border-radius: 9999px;
+  }
+
+  .range-thumb {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #7c3aed; /* bg-purple-600 */
+    border-radius: 9999px;
+  }
